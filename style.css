@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Alagard';
+    src: url('./fonts/alagard.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #2b2b2b;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 248, 230, 0.9);
+    border-bottom: 1px solid #c2a15d;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Alagard';
+    font-size: 1.8rem;
+    color: #6b4f1d;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6b4f1d;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a67c2e;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(245, 238, 220, 0.75), rgba(245, 238, 220, 0.75)),
+        url("imagens/WhatsApp Image 2026-08-12 at 14.41.19.jpeg") no-repeat;
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: 'Alagard';
+    font-size: 3rem;
+    color: #5a3e14;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* BOTÃO */
+
+.btn-download {
+    padding: 15px 40px;
+    background: #c2a15d;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Alagard';
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background: #a67c2e;
+}
+
+/* SEÇÕES */
+
+#recursos {
+    background: #e0d2b8;
+}
+
+.section {
+    padding: 120px 8%;
+    background: #f5eedc;
+}
+
+.text-box h2 {
+    font-family: 'Alagard';
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6b4f1d;
+}
+
+.text-box p {
+    line-height: 1.7;
+}
+
+/* DOWNLOAD */
+
+.download-section {
+    padding: 120px 8%;
+    background: #e8dcc2;
+    text-align: center;
+}
+
+.download-section h2 {
+    font-family: 'Alagard';
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #5a3e14;
+}
+
+.download-section a {
+    padding: 15px 40px;
+    background: #c2a15d;
+    color: white;
+    text-decoration: none;
+    font-family: 'Alagard';
+    transition: 0.3s;
+}
+
+.download-section a:hover {
+    background: #a67c2e;
+}
+
+/* ANIMAÇÃO */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 8%;
+        flex-direction: column;
+        background: #f5eedc;
+        padding: 20px;
+        display: none;
+        border: 1px solid #c2a15d;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 80px 8%;
+    }
+}
+
+/* ================= ADIÇÃO: TEXTO + IMAGEM ================= */
+
+.content-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.image-box {
+    flex: 1;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 500px;
+    border: 3px solid #c2a15d;
+}
+
+.text-box {
+    flex: 1;
+}
+
+@media (max-width: 900px) {
+
+    .content-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-box img {
+        max-width: 100%;
+    }
+
+}
